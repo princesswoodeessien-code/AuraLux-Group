@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Departments | Your Hospital</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f9fb;
+            color: #333;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: green;
+            color: mediumturquiose;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: mediumturquoise;
+            color: #333;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: green;
+            color: white;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        /* HEADER */
+        header {
+            background: mediumturquoise;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid #00843d;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(
+                rgba(0, 70, 80, 0.75),
+                rgba(0, 70, 80, 0.75)
+            ),
+            url("./ai_image_1786742471638.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            height: 330px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 19px;
+        }
+
+        /* INTRODUCTION */
+        .intro {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #087f8c;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        .intro p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* DEPARTMENT SECTION */
+        .departments {
+            padding: 30px 8% 60px;
+        }
+
+        .department-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* DEPARTMENT CARD */
+        .department-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+            transition: 0.3s;
+        }
+
+        .department-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+
+            background: #087f8c;
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 28px;
+
+            margin-bottom: 20px;
+        }
+
+        .department-card h3 {
+            color: #087f8c;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .department-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .department-card ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .department-card ul li {
+            margin-bottom: 7px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            background: #087f8c;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 10px 18px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #055c65;
+        }
+
+        /* EMERGENCY */
+        .emergency {
+            background: #064c54;
+            color: white;
+
+            text-align: center;
+
+            padding: 50px 20px;
+        }
+
+        .emergency h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .emergency p {
+            margin-bottom: 20px;
+        }
+
+        .emergency-number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+  /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            padding: 35px 7%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        footer h3 {
+            color: #f5c400;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: #ccc;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .top-bar {
+                display: none;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .announcement-item {
+                flex-direction: column;
+            }
+ 
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+
+            .department-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .department-container {
+                grid-template-columns: 1fr;
+            }
+        }
+ .image {
+       display: flex;
+       align-items: center;
+       gap: 9px;
+       width: 80px;
+       height: 80px;
+       border-radius: 180%;
+       background: green;
+       color: green;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-weight: bold;
+       font-size: 20px;
+      }
+        }
+    </style>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0; z-index: 1000; ">
+      <div class="image">
+          <img src="./Screenshot_20260818-123150~2.png" style="border: 360px" width="15%">
+      </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+                         <li class="nav-item">
+          <a class="nav-link" href="service.html">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="patient.html">Patient Info</a></li>
+            <li><a class="dropdown-item" href="consult.html">Consultation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="department.html">Departments</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- HERO -->
+<section class="hero">
+
+    <h1>Our Departments</h1>
+
+    <p>
+        Professional healthcare services provided by dedicated medical teams
+    </p>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+<section class="intro">
+
+    <h2>Our Medical Departments</h2>
+
+    <p>
+        Our hospital provides a wide range of healthcare services through
+        specialized departments. Each department is staffed by qualified
+        healthcare professionals committed to providing safe, efficient and
+        compassionate care to our patients.
+    </p>
+
+</section>
+
+
+<!-- DEPARTMENTS -->
+<section class="departments">
+
+    <div class="department-container">
+
+
+        <!-- Emergency -->
+        <div class="department-card">
+
+            <div class="icon">🚑</div>
+
+            <h3>Emergency Department</h3>
+
+            <p>
+                Provides immediate medical attention for patients with
+                urgent or emergency healthcare needs.
+            </p>
+
+            <ul>
+                <li>Emergency assessment</li>
+                <li>First aid</li>
+                <li>Urgent medical treatment</li>
+                <li>Emergency stabilization</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- General Medicine -->
+        <div class="department-card">
+
+            <div class="icon">🩺</div>
+
+            <h3>General Medicine</h3>
+
+            <p>
+                Provides diagnosis, treatment and management of common
+                medical conditions.
+            </p>
+
+            <ul>
+                <li>Medical consultations</li>
+                <li>Health assessment</li>
+                <li>Chronic disease management</li>
+                <li>Preventive healthcare</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Surgery -->
+        <div class="department-card">
+
+            <div class="icon">⚕️</div>
+
+            <h3>Surgery Department</h3>
+
+            <p>
+                Provides surgical consultations, procedures and
+                postoperative care.
+            </p>
+
+            <ul>
+                <li>Surgical consultation</li>
+                <li>Minor procedures</li>
+                <li>Major surgical care</li>
+                <li>Postoperative care</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Maternity -->
+        <div class="department-card">
+
+            <div class="icon">👩‍🍼</div>
+
+            <h3>Obstetrics & Gynaecology</h3>
+
+            <p>
+                Provides healthcare services for women, pregnancy,
+                childbirth and reproductive health.
+            </p>
+
+            <ul>
+                <li>Antenatal care</li>
+                <li>Delivery services</li>
+                <li>Postnatal care</li>
+                <li>Women's health</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Paediatrics -->
+        <div class="department-card">
+
+            <div class="icon">👶</div>
+
+            <h3>Paediatrics</h3>
+
+            <p>
+                Provides healthcare services for infants, children
+                and adolescents.
+            </p>
+
+            <ul>
+                <li>Child health checks</li>
+                <li>Childhood illness care</li>
+                <li>Immunization support</li>
+                <li>Growth monitoring</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Laboratory -->
+        <div class="department-card">
+
+            <div class="icon">🔬</div>
+
+            <h3>Laboratory Department</h3>
+
+            <p>
+                Provides laboratory investigations that assist healthcare
+                professionals in diagnosis and treatment.
+            </p>
+
+            <ul>
+                <li>Blood tests</li>
+                <li>Urine tests</li>
+                <li>Microbiology</li>
+                <li>Diagnostic investigations</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Pharmacy -->
+        <div class="department-card">
+
+            <div class="icon">💊</div>
+
+            <h3>Pharmacy Department</h3>
+
+            <p>
+                Provides pharmaceutical services and supports patients
+                with safe medication use.
+            </p>
+
+            <ul>
+                <li>Prescription services</li>
+                <li>Medication counselling</li>
+                <li>Medicine dispensing</li>
+                <li>Medication information</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Radiology -->
+        <div class="department-card">
+
+            <div class="icon">🩻</div>
+
+            <h3>Radiology & Imaging</h3>
+
+            <p>
+                Provides diagnostic imaging services to support medical
+                assessment and treatment.
+            </p>
+
+            <ul>
+                <li>X-ray services</li>
+                <li>Ultrasound</li>
+                <li>Diagnostic imaging</li>
+                <li>Imaging consultations</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Dental -->
+        <div class="department-card">
+
+            <div class="icon">🦷</div>
+
+            <h3>Dental Department</h3>
+
+            <p>
+                Provides preventive, diagnostic and general dental
+                healthcare services.
+            </p>
+
+            <ul>
+                <li>Dental examinations</li>
+                <li>Oral health education</li>
+                <li>Dental cleaning</li>
+                <li>Dental treatment</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Physiotherapy -->
+        <div class="department-card">
+
+            <div class="icon">🏃</div>
+
+            <h3>Physiotherapy</h3>
+
+            <p>
+                Helps patients improve movement, physical function and
+                recovery following illness or injury.
+            </p>
+
+            <ul>
+                <li>Physical rehabilitation</li>
+                <li>Mobility support</li>
+                <li>Exercise therapy</li>
+                <li>Recovery programmes</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Nursing -->
+        <div class="department-card">
+
+            <div class="icon">👩‍⚕️</div>
+
+            <h3>Nursing Department</h3>
+
+            <p>
+                Provides professional nursing care and supports patients
+                throughout their hospital stay.
+            </p>
+
+            <ul>
+                <li>Patient care</li>
+                <li>Health monitoring</li>
+                <li>Patient education</li>
+                <li>Post-treatment support</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+
+        <!-- Outpatient -->
+        <div class="department-card">
+
+            <div class="icon">🏥</div>
+
+            <h3>Outpatient Department</h3>
+
+            <p>
+                Provides consultations, examinations and treatment for
+                patients who do not require hospital admission.
+            </p>
+
+            <ul>
+                <li>Medical consultations</li>
+                <li>Patient assessment</li>
+                <li>Follow-up visits</li>
+                <li>Health screening</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Contact Department
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EMERGENCY SECTION -->
+<section class="emergency">
+
+    <h2>Need Emergency Care?</h2>
+
+    <p>
+        Our emergency team is available to provide urgent medical care.
+    </p>
+
+    <div class="emergency-number">
+        Emergency: 024 XXX XXXX
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Healthcare Service</h3>
+                <p>
+                    Providing quality healthcare
+                    information and services.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <p>
+                    <a href="#home">Home</a>
+                </p>
+                <p>
+                    <a href="#about">About Us</a>
+                </p>
+                <p>
+                    <a href="#services">Services</a>
+                </p>
+                <p>
+                    <a href="#news">News</a>
+                </p>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>
+                    Accra, Ghana
+                </p>
+                <p>
+                    princesswoodeessien@gmail.com
+                </p>
+                <p>
+                    +233 256 029 886
+                </p>
+            </div>
+        </div>
+      
+        <div class="copyright">
+            © 2026 Healthcare Service Portal.
+            All Rights Reserved. 
+            AuraLux!!
+            The Light of YOUR Aura.
+        </div>
+    </footer>
+
+</body>
+</html>

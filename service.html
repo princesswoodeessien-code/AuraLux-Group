@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services | Your Hospital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f9fb;
+            color: #333;
+        }
+        /* TOP BAR */
+        .top-bar {
+            background: #111;
+            color: mediumturquiose;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: #111;
+            color: white;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+  
+        /* HEADER */
+        header {
+            background: mediumturquoise;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid #00843d;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        /* ================= HERO ================= */
+
+        .hero {
+            height: 350px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 70, 80, 0.75),
+                    rgba(0, 70, 80, 0.75)
+                ),
+                url("./ai_image_1786742471638.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 19px;
+        }
+
+
+        /* ================= INTRODUCTION ================= */
+
+        .intro {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #087f8c;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 850px;
+            margin: auto;
+
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            padding: 20px 8% 60px;
+        }
+
+        .services-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* ================= SERVICE CARD ================= */
+
+        .service-card {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ICON */
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+
+            background-color: #087f8c;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* TITLE */
+
+        .service-card h3 {
+            color: #087f8c;
+
+            font-size: 21px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* DESCRIPTION */
+
+        .service-card p {
+            line-height: 1.6;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* LIST */
+
+        .service-card ul {
+            margin-left: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card ul li {
+            margin-bottom: 7px;
+        }
+
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+
+            background-color: #087f8c;
+
+            color: white;
+
+            padding: 10px 18px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #055c65;
+        }
+
+
+        /* ================= APPOINTMENT ================= */
+
+        .appointment {
+            background-color: #e7f7f8;
+
+            text-align: center;
+
+            padding: 55px 20px;
+        }
+
+        .appointment h2 {
+            color: #087f8c;
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+        .appointment p {
+            margin-bottom: 20px;
+        }
+
+        .appointment-btn {
+            display: inline-block;
+
+            background-color: #087f8c;
+
+            color: white;
+
+            padding: 13px 25px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .appointment-btn:hover {
+            background-color: #055c65;
+        }
+
+
+        /* ================= EMERGENCY ================= */
+
+        .emergency {
+            background-color: #064c54;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 45px 20px;
+        }
+
+        .emergency h2 {
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+        .emergency p {
+            margin-bottom: 15px;
+        }
+
+        .emergency-number {
+            font-size: 26px;
+
+            font-weight: bold;
+        }
+
+  /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            padding: 35px 7%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        footer h3 {
+            color: #f5c400;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: #ccc;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .top-bar {
+                display: none;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .announcement-item {
+                flex-direction: column;
+            }
+ 
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+.image {
+       display: flex;
+            align-items: center;
+            gap: 10px;
+           width: 80px;
+            height: 80px;
+            border-radius: 180%;
+            background: #00843d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+  }
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0; z-index: 1000; ">
+ 
+     <div class="image">
+     <img src="./Screenshot_20260818-123150~2.png" style="border-radius: 360px" width="15%">
+     </div>
+        <div class="container-fluid"> 
+    <a class="navbar-brand" href="home.html">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+               <li class="nav-item">
+          <a class="nav-link" href="service.html">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="patient.html">Patient Info</a></li>
+            <li><a class="dropdown-item" href="consult.html">Consultation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="department.html">Departments</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Our Services</h1>
+
+    <p>
+        Quality healthcare services for you and your family
+    </p>
+</section>
+
+<!-- ================= INTRODUCTION ================= -->
+
+<section class="intro">
+    <h2>Healthcare Services We Provide</h2>
+    <p>
+        At Your Hospital, we provide a wide range of healthcare services
+        delivered by qualified healthcare professionals. Our services are
+        designed to promote good health, support diagnosis and treatment,
+        and provide compassionate care to our patients.
+    </p>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services">
+    <div class="services-container">
+
+        <!-- OUTPATIENT -->
+        <div class="service-card">
+            <div class="service-icon">
+                🏥
+            </div>
+            <h3>
+                Outpatient Services
+            </h3>
+            <p>
+                We provide medical consultations, examinations and
+                treatment for patients who do not require hospital admission.
+            </p>
+
+            <ul>
+                <li>Medical consultations</li>
+                <li>Health assessment</li>
+                <li>Follow-up visits</li>
+                <li>Routine check-ups</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+        <!-- EMERGENCY -->
+
+        <div class="service-card">
+            <div class="service-icon">
+                🚑
+            </div>
+
+            <h3>
+                Emergency Care
+            </h3>
+
+            <p>
+                Our emergency service provides prompt medical attention
+                for urgent healthcare situations.
+            </p>
+
+            <ul>
+                <li>Emergency assessment</li>
+                <li>First aid</li>
+                <li>Urgent treatment</li>
+                <li>Patient stabilization</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+        <!-- INPATIENT -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🛏️
+            </div>
+
+            <h3>
+                Inpatient Care
+            </h3>
+
+            <p>
+                We provide comfortable hospital care for patients who
+                require admission and monitoring.
+            </p>
+
+            <ul>
+                <li>Patient admission</li>
+                <li>Medical monitoring</li>
+                <li>Nursing care</li>
+                <li>Recovery support</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+        <!-- MATERNITY -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                👩‍🍼
+            </div>
+
+            <h3>
+                Maternity Services
+            </h3>
+
+            <p>
+                We provide maternity care to support mothers throughout
+                pregnancy, childbirth and after delivery.
+            </p>
+
+            <ul>
+                <li>Antenatal care</li>
+                <li>Delivery care</li>
+                <li>Postnatal care</li>
+                <li>Mother and baby support</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- PAEDIATRICS -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                👶
+            </div>
+
+            <h3>
+                Paediatric Care
+            </h3>
+
+            <p>
+                Specialized healthcare services for infants, children
+                and adolescents.
+            </p>
+
+            <ul>
+                <li>Child health checks</li>
+                <li>Growth monitoring</li>
+                <li>Childhood illness care</li>
+                <li>Health education</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- LABORATORY -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔬
+            </div>
+
+            <h3>
+                Laboratory Services
+            </h3>
+
+            <p>
+                Our laboratory provides diagnostic investigations that
+                assist healthcare professionals in patient care.
+            </p>
+
+            <ul>
+                <li>Blood tests</li>
+                <li>Urine tests</li>
+                <li>Microbiology</li>
+                <li>Diagnostic investigations</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- PHARMACY -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💊
+            </div>
+
+            <h3>
+                Pharmacy Services
+            </h3>
+
+            <p>
+                Our pharmacy provides medication services and information
+                to help patients use medicines safely.
+            </p>
+
+            <ul>
+                <li>Medicine dispensing</li>
+                <li>Prescription services</li>
+                <li>Medication information</li>
+                <li>Patient counselling</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- RADIOLOGY -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🩻
+            </div>
+
+            <h3>
+                Radiology & Imaging
+            </h3>
+
+            <p>
+                Diagnostic imaging services are available to support
+                medical examination and diagnosis.
+            </p>
+
+            <ul>
+                <li>X-ray</li>
+                <li>Ultrasound</li>
+                <li>Diagnostic imaging</li>
+                <li>Imaging reports</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- SURGERY -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ⚕️
+            </div>
+
+            <h3>
+                Surgical Services
+            </h3>
+
+            <p>
+                Our surgical team provides assessment, procedures and
+                postoperative care when clinically appropriate.
+            </p>
+
+            <ul>
+                <li>Surgical consultations</li>
+                <li>Minor procedures</li>
+                <li>Surgical care</li>
+                <li>Postoperative support</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- DENTAL -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🦷
+            </div>
+
+            <h3>
+                Dental Services
+            </h3>
+
+            <p>
+                We provide general dental care and oral health services
+                for patients.
+            </p>
+
+            <ul>
+                <li>Dental examinations</li>
+                <li>Oral health education</li>
+                <li>Dental cleaning</li>
+                <li>Dental treatment</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- PHYSIOTHERAPY -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏃
+            </div>
+
+            <h3>
+                Physiotherapy
+            </h3>
+
+            <p>
+                Physiotherapy helps patients improve movement, physical
+                function and recovery.
+            </p>
+
+            <ul>
+                <li>Physical rehabilitation</li>
+                <li>Mobility support</li>
+                <li>Exercise therapy</li>
+                <li>Recovery programmes</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+
+        <!-- HEALTH SCREENING -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Health Screening
+            </h3>
+
+            <p>
+                Health screening services help individuals monitor their
+                health and identify potential concerns early.
+            </p>
+
+            <ul>
+                <li>General health checks</li>
+                <li>Blood pressure checks</li>
+                <li>Health assessments</li>
+                <li>Health education</li>
+            </ul>
+
+            <a href="contact.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= APPOINTMENT ================= -->
+
+<section class="appointment">
+
+    <h2>
+        Need Medical Care?
+    </h2>
+
+    <p>
+        Book an appointment with one of our healthcare professionals.
+    </p>
+
+    <a href="appointment.html" class="appointment-btn">
+        Book an Appointment
+    </a>
+
+</section>
+
+
+
+<!-- ================= EMERGENCY ================= -->
+
+<section class="emergency">
+
+    <h2>
+        Emergency Care
+    </h2>
+
+    <p>
+        For urgent medical situations, contact our emergency department.
+    </p>
+
+    <div class="emergency-number">
+        Emergency: 054 837 2752
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Healthcare Service</h3>
+                <p>
+                    Providing quality healthcare
+                    information and services.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <p>
+                    <a href="#home">Home</a>
+                </p>
+                <p>
+                    <a href="#about">About Us</a>
+                </p>
+                <p>
+                    <a href="#services">Services</a>
+                </p>
+                <p>
+                    <a href="#news">News</a>
+                </p>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>
+                    Accra, Ghana
+                </p>
+                <p>
+                    princesswoodeessien@gmail.com
+                </p>
+                <p>
+                    +233 256 029 886
+                </p>
+            </div>
+        </div>
+      
+        <div class="copyright">
+            © 2026 Healthcare Service Portal.
+            All Rights Reserved. 
+            AuraLux!!
+            The Light of YOUR Aura.
+        </div>
+    </footer>
+
+
+</body>
+</html>

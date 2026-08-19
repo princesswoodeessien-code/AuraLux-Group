@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Your Hospital Name</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: mediumturquoise;
+            color: mediumturquiose;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: mediumturquoise;
+            color: #333;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: #111;
+            color: white;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        /* HEADER */
+        header {
+            background: mediumturquoise;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid #00843d;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(
+                rgba(0, 80, 90, 0.75),
+                rgba(0, 80, 90, 0.75)
+            ),
+            url("./ai_image_1786742471638.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            height: 350px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* General Section */
+        section {
+            padding: 50px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #087f8c;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        /* About */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        /* Mission and Vision */
+        .mission-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .mission-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .mission-box h3 {
+            color: #087f8c;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        /* Values */
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .value-box {
+            background: white;
+            text-align: center;
+            padding: 25px 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .value-box h3 {
+            color: #087f8c;
+            margin-bottom: 10px;
+        }
+
+        /* Services */
+        .services {
+            background-color: white;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            padding: 25px;
+            border-left: 5px solid #087f8c;
+            background-color: #f5f9fc;
+        }
+
+        .service h3 {
+            color: #087f8c;
+            margin-bottom: 8px;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .why-us ul {
+            list-style: none;
+        }
+
+        .why-us li {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .why-us li::before {
+            content: "✓";
+            color: #087f8c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Director */
+        .director {
+            background-color: #e9f7f8;
+            text-align: center;
+        }
+
+        .director p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 17px;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #087f8c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #055e68;
+        }
+  /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            padding: 35px 7%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        footer h3 {
+            color: #f5c400;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: #ccc;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+        }
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .mission-container,
+            .services-container,
+            .values-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    .image {
+       display: flex;
+       align-items: center;
+       gap: 9px;
+       width: 80px;
+       height: 80px;
+       border-radius: 180%;
+       background: green;
+       color: green;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-weight: bold;
+       font-size: 20px;
+      }
+        
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0; z-index: 1000; ">
+  <div class="container-fluid">
+     <div class="image">
+    <img src="./Screenshot_20260818-123150~2.png" style="border-radius: 270px" width="75%">
+    </div>
+    <a class="navbar-brand" href="home.html">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+               <li class="nav-item">
+          <a class="nav-link" href="service.html">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="patient.html">Patient Info</a></li>
+            <li><a class="dropdown-item" href="consult.html">Consultation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="department.html">Departments</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>About Us</h1>
+        <p>Compassionate Care • Professional Excellence • Better Health</p>
+    </div>
+
+
+    <!-- Introduction -->
+    <section class="about">
+        <h2 class="section-title">Who We Are</h2>
+
+        <div class="about-content">
+            <p>
+                Welcome to <strong>Your Hospital</strong>, a healthcare
+                institution committed to providing safe, affordable and
+                high-quality healthcare services to individuals and families.
+            </p>
+
+            <p>
+                Our hospital combines modern medical technology with
+                compassionate patient care. We are dedicated to promoting
+                good health, preventing diseases and improving the quality
+                of life of the people we serve.
+            </p>
+
+            <p>
+                Our team consists of qualified doctors, nurses, pharmacists,
+                laboratory professionals and other healthcare specialists
+                who work together to provide excellent patient care.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Mission and Vision -->
+    <section>
+        <h2 class="section-title">Our Mission & Vision</h2>
+
+        <div class="mission-container">
+
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+
+                <p>
+                    To provide accessible, patient-centered and high-quality
+                    healthcare services through professional excellence,
+                    modern technology and compassionate care.
+                </p>
+            </div>
+
+            <div class="mission-box">
+                <h3>Our Vision</h3>
+
+                <p>
+                    To become a trusted healthcare institution recognized
+                    for excellence, innovation and compassionate service.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Core Values -->
+    <section>
+        <h2 class="section-title">Our Core Values</h2>
+
+        <div class="values-container">
+
+            <div class="value-box">
+                <h3>Compassion</h3>
+                <p>We treat every patient with kindness, dignity and respect.</p>
+            </div>
+
+            <div class="value-box">
+                <h3>Integrity</h3>
+                <p>We maintain honesty, professionalism and ethical standards.</p>
+            </div>
+
+            <div class="value-box">
+                <h3>Excellence</h3>
+                <p>We continuously strive to improve the quality of our services.</p>
+            </div>
+
+            <div class="value-box">
+                <h3>Teamwork</h3>
+                <p>We work together to achieve the best possible patient outcomes.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Services -->
+    <section class="services">
+        <h2 class="section-title">Our Healthcare Services</h2>
+
+        <div class="services-container">
+
+            <div class="service">
+                <h3>General Medicine</h3>
+                <p>
+                    Diagnosis, treatment and management of common medical
+                    conditions.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Emergency Care</h3>
+                <p>
+                    Prompt medical attention for urgent and emergency cases.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Maternity Care</h3>
+                <p>
+                    Quality antenatal, delivery and postnatal services.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Laboratory Services</h3>
+                <p>
+                    Reliable laboratory testing to support diagnosis and treatment.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Pharmacy</h3>
+                <p>
+                    Safe and professional pharmaceutical services for patients.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Outpatient Services</h3>
+                <p>
+                    Convenient consultations and treatment without hospital admission.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section>
+        <h2 class="section-title">Why Choose Us?</h2>
+
+        <div class="why-us">
+
+            <ul>
+                <li>Qualified and experienced healthcare professionals</li>
+                <li>Patient-centered healthcare services</li>
+                <li>Modern medical equipment and technology</li>
+                <li>Clean and comfortable healthcare environment</li>
+                <li>Affordable and accessible healthcare</li>
+                <li>Commitment to patient safety</li>
+                <li>Friendly and compassionate staff</li>
+            </ul>
+
+        </div>
+    </section>
+
+
+    <!-- Director's Message -->
+    <section class="director">
+
+        <h2 class="section-title">Message From Our Medical Director</h2>
+
+        <p>
+            "At Your Hospital, every patient matters. Our goal is to provide
+            healthcare that combines medical excellence with compassion and
+            respect. We are committed to working with our patients and their
+            families to achieve better health."
+        </p>
+
+        <p><strong>— Medical Director</strong></p>
+
+        <a href="contact.html" class="btn">Contact Us</a>
+
+    </section>
+
+
+  <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Healthcare Service</h3>
+                <p>
+                    Providing quality healthcare
+                    information and services.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <p>
+                    <a href="#home">Home</a>
+                </p>
+                <p>
+                    <a href="#about">About Us</a>
+                </p>
+                <p>
+                    <a href="#services">Services</a>
+                </p>
+                <p>
+                    <a href="#news">News</a>
+                </p>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>
+                    Accra, Ghana
+                </p>
+                <p>
+                    princesswoodeessien@gmail.com
+                </p>
+                <p>
+                    +233 256 029 886
+                </p>
+            </div>
+        </div>
+      
+        <div class="copyright">
+            © 2026 Healthcare Service Portal.
+            All Rights Reserved.
+            AuraLux!!
+            The Light of YOUR Aura.
+        </div>
+    </footer>
+
+</body>
+</html>

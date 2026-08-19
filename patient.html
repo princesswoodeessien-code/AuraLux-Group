@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Information | Evercare Hospital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ 
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f8fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+         /* TOP BAR */
+        .top-bar {
+            background: mediumturquoise;
+            color: mediumturquiose;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: mediumturquoise;
+            color: #333;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: #111;
+            color: white;
+            padding: 8px 7%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        /* HEADER */
+        header {
+            background: mediumturquoise;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid #00843d;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #005959;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #9fffff;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(
+                rgba(0, 100, 100, 0.8),
+                rgba(0, 100, 100, 0.8)
+            ),
+            url("./ai_image_1786742471638.jpg");
+
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .intro {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 35px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .intro h2 {
+            color: #007b7b;
+            margin-bottom: 10px;
+        }
+
+        /* CARDS */
+        .patient-info {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.1);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #007b7b;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007b7b;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #005959;
+        }
+
+        /* IMPORTANT NOTICE */
+        .notice {
+            background-color: #fff4d6;
+            border-left: 5px solid #e5a500;
+            padding: 20px;
+            margin-top: 35px;
+            border-radius: 5px;
+        }
+
+        .notice h2 {
+            color: #996900;
+            margin-bottom: 10px;
+        }
+
+        /* EMERGENCY */
+        .emergency {
+            background-color: #b00020;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        .emergency h2 {
+            margin-bottom: 10px;
+        }
+
+        .emergency-number {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+  /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            padding: 35px 7%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        footer h3 {
+            color: #f5c400;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: #ccc;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+        }
+        /* Mobile */
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+        }
+      .image {
+       display: flex;
+       align-items: center;
+       gap: 9px;
+       width: 80px;
+       height: 80px;
+       border-radius: 180%;
+       background: green;
+       color: green;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-weight: bold;
+       font-size: 20px;
+      }
+        
+
+    </style>
+
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0; z-index: 1000;">
+  <div class="container-fluid">
+     <div class="image">
+    <img src="./Screenshot_20260818-123150~2.png" style="border-radius: 270px" width="75%">
+    </div>
+    <a class="navbar-brand" href="home.html">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+               <li class="nav-item">
+          <a class="nav-link" href="service.html">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="patient.html">Patient Info</a></li>
+            <li><a class="dropdown-item" href="consult.html">Consultation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="department.html">Departments</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Patient Information</h1>
+
+    <p>
+        Information and resources to help you
+        receive the best possible care.
+    </p>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro">
+
+        <h2>Welcome to Our Patient Information Centre</h2>
+
+        <p>
+            Our Patient Information Centre provides useful
+            information about hospital services, appointments,
+            registration, admission, discharge, insurance,
+            visiting hours and patient rights.
+        </p>
+
+    </section>
+
+
+    <!-- INFORMATION CARDS -->
+
+    <section class="patient-info">
+
+
+        <!-- REGISTRATION -->
+
+        <div class="card">
+
+            <div class="icon">📝</div>
+
+            <h3>Patient Registration</h3>
+
+            <p>
+                Learn how to register as a new patient and
+                provide the information required for your
+                hospital visit.
+            </p>
+
+            <a href="rig.html" class="btn">
+                Register
+            </a>
+
+        </div>
+
+
+        <!-- APPOINTMENTS -->
+
+        <div class="card">
+
+            <div class="icon">📅</div>
+
+            <h3>Appointments</h3>
+
+            <p>
+                Book, reschedule or cancel an appointment
+                with one of our healthcare professionals.
+            </p>
+
+            <a href="appointments.html" class="btn">
+                Book Appointment
+            </a>
+
+        </div>
+
+
+        <!-- ADMISSION -->
+
+        <div class="card">
+
+            <div class="icon">🏥</div>
+
+            <h3>Hospital Admission</h3>
+
+            <p>
+                Find out what to expect when you are admitted
+                and what items you may need during your stay.
+            </p>
+
+            <a href="admission.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+        <!-- DISCHARGE -->
+
+        <div class="card">
+
+            <div class="icon">📄</div>
+
+            <h3>Discharge Information</h3>
+
+            <p>
+                Learn about discharge procedures, follow-up
+                appointments and care after leaving the hospital.
+            </p>
+
+            <a href="discharge.html" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+
+        <!-- BILLING -->
+
+        <div class="card">
+
+            <div class="icon">💳</div>
+
+            <h3>Billing & Insurance</h3>
+
+            <p>
+                Information about hospital bills, NHIS,
+                private insurance and payment options.
+            </p>
+
+            <a href="billing.html" class="btn">
+                View Information
+            </a>
+
+        </div>
+
+
+        <!-- PHARMACY -->
+
+        <div class="card">
+
+            <div class="icon">💊</div>
+
+            <h3>Pharmacy Services</h3>
+
+            <p>
+                Learn about prescriptions, medications and
+                pharmacy services available at the hospital.
+            </p>
+
+            <a href="pharmacy.html" class="btn">
+                Pharmacy
+            </a>
+
+        </div>
+
+
+        <!-- LABORATORY -->
+
+        <div class="card">
+
+            <div class="icon">🧪</div>
+
+            <h3>Laboratory Services</h3>
+
+            <p>
+                Information about laboratory tests and
+                accessing test results securely.
+            </p>
+
+            <a href="laboratory.html" class="btn">
+                Laboratory
+            </a>
+
+        </div>
+
+
+        <!-- VISITING HOURS -->
+
+        <div class="card">
+
+            <div class="icon">👨‍👩‍👧</div>
+
+            <h3>Visiting Hours</h3>
+
+            <p>
+                Find information about visiting patients,
+                visitor guidelines and visiting hours.
+            </p>
+
+            <a href="visiting.html" class="btn">
+                Visiting Hours
+            </a>
+
+        </div>
+
+
+        <!-- PATIENT RIGHTS -->
+
+        <div class="card">
+
+            <div class="icon">⚖️</div>
+
+            <h3>Patient Rights</h3>
+
+            <p>
+                Learn about patient rights, responsibilities,
+                privacy and confidentiality.
+            </p>
+
+            <a href="rights.html" class="btn">
+                Read More
+            </a>
+
+        </div>
+
+
+        <!-- EMERGENCY -->
+
+        <div class="card">
+
+            <div class="icon">🚑</div>
+
+            <h3>Emergency Services</h3>
+
+            <p>
+                Information about emergency care and how
+                to contact the hospital during an emergency.
+            </p>
+
+            <a href="emergency.html" class="btn">
+                Emergency
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- PRIVACY NOTICE -->
+
+    <section class="notice">
+
+        <h2>🔒 Patient Privacy</h2>
+
+        <p>
+            Patient medical information is confidential.
+            Personal details, medical records, laboratory
+            results and other sensitive information should
+            not be displayed publicly on the website.
+            Private patient information should be protected
+            through a secure patient portal.
+        </p>
+
+    </section>
+
+
+    <!-- EMERGENCY SECTION -->
+
+    <section class="emergency">
+
+        <h2>🚨 Medical Emergency</h2>
+
+        <p>
+            If you have a medical emergency, contact the
+            hospital emergency department or your local
+            emergency service immediately.
+        </p>
+
+        <div class="emergency-number">
+            Emergency: 0300-000-000
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <div>
+
+            <h3>Evercare Hospital</h3>
+
+            <p>
+                Providing quality healthcare with
+                compassion and excellence.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Patient Services</h3>
+
+            <p>Patient Registration</p>
+
+            <p>Appointments</p>
+
+            <p>Admission</p>
+
+            <p>Discharge</p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact Us</h3>
+
+            <p>📞 0300-000-000</p>
+
+            <p>✉ info@evercarehospital.com</p>
+
+            <p>📍 Accra, Ghana</p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Evercare Hospital.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
